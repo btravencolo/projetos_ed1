@@ -23,7 +23,7 @@ int main(void) {
     list_push_front(lista, a);
     list_push_front(lista, b);
     list_print(lista);
-    printf("\n=========\n");
+    printf("\n==========\n");
     list_print_reverse(lista);
 
   }
