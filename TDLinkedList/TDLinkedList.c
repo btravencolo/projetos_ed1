@@ -75,6 +75,53 @@ int list_pop_back(TDLinkedList *li){
   }
 }
 
+int list_insert(TDLinkedList *li, int pos, struct aluno al){
+  if (li == NULL){
+    return INVALID_NULL_POINTER;
+  } else if ( (pos <= 0) || (pos > li->size + 1)) {
+    return OUT_OF_RANGE;
+  } else {
+    DLNode *node;
+    node = malloc(sizeof(DLNode));
+    if (node == NULL){
+      return OUT_OF_MEMORY;
+    } else {
+      node->data = al;
+      if (li->size == 0){
+        node->prev = NULL;
+        node->next = NULL;
+
+        li->begin = node;
+        li->end = node;
+        li->size = 1;
+      } else {
+        if (pos == 1) {
+          // fazer
+        } else if (pos == li->size +1){
+          // fazer
+        } else {
+          int i = 1;
+          DLNode *aux;
+          aux = li->begin;
+          while (i < pos-1){
+            aux = aux->next;
+            i++;
+          }
+          node->prev = aux;
+          node->next = aux->next;
+          node->next->prev = node;
+          aux->next = node;
+
+          li->size++;
+
+        }
+      }
+    }
+
+  }  
+}
+
+
 int list_print(TDLinkedList *li){
   DLNode *aux = li->begin;
   while(aux != NULL){

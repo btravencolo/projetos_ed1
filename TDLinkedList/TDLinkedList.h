@@ -16,6 +16,9 @@ typedef struct TDLinkedList TDLinkedList;
 TDLinkedList* list_create();
 
 int list_push_front(TDLinkedList *li, struct aluno al);
+int list_insert(TDLinkedList *li, int pos, struct aluno al);
+
 int list_print(TDLinkedList *li);
 int list_print_reverse(TDLinkedList *li);
+
 int list_pop_back(TDLinkedList *li);
