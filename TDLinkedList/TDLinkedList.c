@@ -54,6 +54,27 @@ int list_push_front(TDLinkedList *li, struct aluno al){
   }
 }
 
+int list_pop_back(TDLinkedList *li){
+  if (li == NULL){
+    return INVALID_NULL_POINTER;
+  } else {
+    if (li->size == 0){
+      return OUT_OF_RANGE;
+    } else if (li->size == 1) {
+      free(li->end);
+      li->begin = NULL;
+      li->end = NULL;
+      li->size = 0;
+    } else {
+      li->end =  li->end->prev;
+      free(li->end->next);
+      li->end->next = NULL;
+      li->size = li->size - 1;
+    }
+    return SUCCESS;   
+  }
+}
+
 int list_print(TDLinkedList *li){
   DLNode *aux = li->begin;
   while(aux != NULL){
