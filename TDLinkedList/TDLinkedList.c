@@ -53,6 +53,7 @@ int list_push_front(TDLinkedList *li, struct aluno al){
     return SUCCESS;
   }
 }
+
 int list_print(TDLinkedList *li){
   DLNode *aux = li->begin;
   while(aux != NULL){
