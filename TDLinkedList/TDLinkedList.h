@@ -20,5 +20,6 @@ int list_insert(TDLinkedList *li, int pos, struct aluno al);
 
 int list_print(TDLinkedList *li);
 int list_print_reverse(TDLinkedList *li);
+int list_erase_data(TDLinkedList *li, int nmat);
 
 int list_pop_back(TDLinkedList *li);

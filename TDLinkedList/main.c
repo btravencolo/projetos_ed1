@@ -22,9 +22,20 @@ int main(void) {
   } else{
     list_push_front(lista, a);
     list_push_front(lista, b);
-    list_print(lista);
+    strcpy(b.nome,"1o. Carlos");
+    b.matricula = 45;
+    list_insert(lista,1,b);
+    strcpy(b.nome,"4o. Otavio");
+    b.matricula = 5;
+    list_insert(lista,4,b);
+
+    strcpy(b.nome,"3o. Marta");
+    b.matricula = 5;
+    list_insert(lista,3,b);
+
+    // list_print(lista);
     printf("\n=============\n");
-    list_print_reverse(lista);
+    list_print(lista);
 
   }
   return 0;
