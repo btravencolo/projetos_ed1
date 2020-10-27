@@ -4,3 +4,5 @@ TLinkedList/main.exe
 TDLinkedList/prog.exe
 TDLinkedList/main.o
 TDLinkedList/TDLinkedList.o
+TStack/prog.exe
+TStack/teste_pilha.o
