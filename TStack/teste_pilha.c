@@ -7,7 +7,7 @@
 int main(){
   printf("Hello World");
 
-  struct aluno a,b;
+  struct aluno a,b,c;
   
   strcpy(a.nome,"João");
   a.matricula = 123;

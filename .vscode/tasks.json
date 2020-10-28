@@ -21,6 +21,50 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"type": "shell",
+			"label": "Compila o LinkedList",
+			"command": "D:\\portables\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-g",
+				"TDLinkedList\\*.c",
+				"-o",
+				"TDLinkedList\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "Compila o TStack",
+			"command": "D:\\portables\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-g",
+				"TStack\\*.c",
+				"TDLinkedList\\TDLinkedList.o"
+				"-o",
+				"TStack\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		}
+
 	]
 }

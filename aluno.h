@@ -1,4 +1,4 @@
-#ifndef alunoh
+#ifndef alunoh 
 #define alunoh
 
 struct aluno{
